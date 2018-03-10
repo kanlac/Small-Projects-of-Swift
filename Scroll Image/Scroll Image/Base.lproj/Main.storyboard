@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="17A405" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_th_of_30__Oct_17___Scroll_Image" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="20" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-TW-Mae">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfL-fm-qQS" userLabel="content view">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="steve" translatesAutoresizingMaskIntoConstraints="NO" id="4pJ-J5-Y6e">
+                                                <rect key="frame" x="0.0" y="152" width="375" height="363"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4pJ-J5-Y6e" firstAttribute="centerY" secondItem="VfL-fm-qQS" secondAttribute="centerY" id="2ZE-Gp-qTd"/>
+                                            <constraint firstItem="4pJ-J5-Y6e" firstAttribute="leading" secondItem="VfL-fm-qQS" secondAttribute="leading" id="k02-TL-6qc"/>
+                                            <constraint firstAttribute="trailing" secondItem="4pJ-J5-Y6e" secondAttribute="trailing" id="sRq-9L-b0P"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VfL-fm-qQS" secondAttribute="bottom" id="62v-Xo-fYf"/>
+                                    <constraint firstItem="VfL-fm-qQS" firstAttribute="top" secondItem="qrO-TW-Mae" secondAttribute="top" id="7D2-rf-9fo"/>
+                                    <constraint firstItem="VfL-fm-qQS" firstAttribute="centerX" secondItem="qrO-TW-Mae" secondAttribute="centerX" id="8Ru-AB-xTX"/>
+                                    <constraint firstItem="VfL-fm-qQS" firstAttribute="leading" secondItem="qrO-TW-Mae" secondAttribute="leading" id="aXy-uV-Eep"/>
+                                    <constraint firstAttribute="trailing" secondItem="VfL-fm-qQS" secondAttribute="trailing" id="ddv-Ol-KR8"/>
+                                    <constraint firstItem="VfL-fm-qQS" firstAttribute="centerY" secondItem="qrO-TW-Mae" secondAttribute="centerY" id="ebv-Nt-2R6"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GrR-Hd-TVr"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qrO-TW-Mae" secondAttribute="bottom" id="6fo-1t-9do"/>
+                            <constraint firstItem="qrO-TW-Mae" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WHK-D1-23i"/>
+                            <constraint firstItem="qrO-TW-Mae" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eE8-64-wlg"/>
+                            <constraint firstAttribute="trailing" secondItem="qrO-TW-Mae" secondAttribute="trailing" id="mQG-RZ-n3c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="qrO-TW-Mae" id="ylN-71-h4f"/>
+                        <outlet property="steveImage" destination="4pJ-J5-Y6e" id="fMO-e9-ZDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="steve" width="320" height="320"/>
+    </resources>
+</document>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_st_of_30__Sep_21___StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="Cdl-ny-au5">
+                                <rect key="frame" x="82" y="372" width="211" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjb-kw-oYC">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ia5-Ml-AQD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHV-if-Ws1">
+                                        <rect key="frame" x="151" y="0.0" width="60" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qC2-R8-NQl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpL-g2-y7D">
+                                <rect key="frame" x="0.0" y="20" width="375" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yj-2M-5T7">
+                                        <rect key="frame" x="8" y="46" width="359" height="189"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="78"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5A-um-vzZ">
+                                        <rect key="frame" x="321" y="8" width="46" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetButtonDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86H-bk-YTL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="e5A-um-vzZ" secondAttribute="trailing" constant="20" id="RaE-iu-0eC"/>
+                                    <constraint firstItem="1yj-2M-5T7" firstAttribute="top" secondItem="WpL-g2-y7D" secondAttribute="top" constant="120" id="XQk-v5-fLq"/>
+                                    <constraint firstItem="e5A-um-vzZ" firstAttribute="top" secondItem="WpL-g2-y7D" secondAttribute="top" constant="15" id="Zkb-wV-qOa"/>
+                                    <constraint firstItem="1yj-2M-5T7" firstAttribute="centerX" secondItem="WpL-g2-y7D" secondAttribute="centerX" id="kAG-oa-05x"/>
+                                    <constraint firstAttribute="height" constant="235" id="p0V-hP-XYo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Cdl-ny-au5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J1G-lt-QAA"/>
+                            <constraint firstItem="Cdl-ny-au5" firstAttribute="top" secondItem="WpL-g2-y7D" secondAttribute="bottom" constant="117" id="Z82-wa-K8H"/>
+                            <constraint firstAttribute="trailing" secondItem="WpL-g2-y7D" secondAttribute="trailing" id="b9L-gy-SgF"/>
+                            <constraint firstItem="WpL-g2-y7D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dY4-wH-OEd"/>
+                            <constraint firstItem="WpL-g2-y7D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hLM-Bw-tou"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PauseButton" destination="ZHV-if-Ws1" id="OYX-qI-BvD"/>
+                        <outlet property="PlayButton" destination="Fjb-kw-oYC" id="bOz-qT-bZo"/>
+                        <outlet property="TimeLabel" destination="1yj-2M-5T7" id="hpH-qT-hpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
